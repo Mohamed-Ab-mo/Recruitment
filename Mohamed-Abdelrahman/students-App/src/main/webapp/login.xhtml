@@ -1,0 +1,70 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html">
+<h:head>
+	<title>login page</title>
+	<link href="../css/style.css" rel="stylesheet" type="text/css"></link>
+
+	<script type="text/javascript">
+
+            $(document).ready(function () {
+
+                $("#loginForm").validate({
+                    rules: {
+                        'loginForm:studentNameId': {
+                            required: true,
+                            normalizer: function (value) {
+                                return $.trim(value);
+                            }
+                        },
+                        'loginForm:passwordId': {
+                            required: true
+                        }
+                    },
+                    messages: {
+                        'loginForm:studentNameId': {
+                            required: "Student Name is requiered and must not be blank!",
+                        },
+                        'loginForm:passwordId': {
+                            required: "Student Password is requiered!"
+                        }
+                    },
+                    errorElement: "div",
+                    errorLabelContainer: "#errorMessages"
+                });
+                $("#loginButtonId").click(function () {
+                    $("#loginForm").valid();
+                });
+            });
+        </script>
+
+
+</h:head>
+<h:body>
+
+	<div align="center">
+		<div class="header">
+			<h1>Welcome Login Page.</h1>
+		</div>
+		<div>
+			<div class="loginDivId">
+				<form action="login" id="loginForm">
+					<h2>Please Enter valid Student Name and Password to login.</h2>
+					<label class="greenLabel"> Student name: </label> 
+					<input type="text" class="input" id="studentNameId" name="studentName" />
+					<label class="greenLabel"> Password: </label> 
+					<input type="password" class="input" id="passwordId" name="password" /> 
+						<input type="submit" id="loginButtonId" class="button" value="login." />
+				</form>
+				<br />
+				<h:outputText class="loginFailedId"
+					value="Wrong Student Name and Password!" rendered="${failedLogin}" />
+				<div id="errorMessages" class="errorsDiv"></div>
+			</div>
+		</div>
+		<div class="footer"></div>
+	</div>
+</h:body>
+</html>
