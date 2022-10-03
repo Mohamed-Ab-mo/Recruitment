@@ -9,7 +9,9 @@ for getting all drones list
 URL:
 
 http://localhost:9696/apis/drones
+
 HTTP method type: Get
+
 Request sample:
 empty request
 Response sample:
