@@ -21,7 +21,7 @@ empty request
 
 Response sample:
 
-   
+    
 [
     {
         "id": 1,
@@ -48,7 +48,7 @@ Response sample:
         "state": "IDLE"
     }
 ]
-   
+    
 ### registerDrones
 URL: 
 `
