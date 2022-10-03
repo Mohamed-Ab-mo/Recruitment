@@ -7,9 +7,12 @@ Useful drone functions include delivery of small items that are (urgently) neede
 ### drones
 for getting all drones list
 URL:
+
 http://localhost:9696/apis/drones
-empty Request
-sample response:
+HTTP method type: Get
+Request sample:
+empty request
+Response sample:
 
 `
 [
