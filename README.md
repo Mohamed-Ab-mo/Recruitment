@@ -20,9 +20,7 @@ Request sample:
 empty request
 
 Response sample:
-
-    
-[
+>[
     {
         "id": 1,
         "serialNumber": "segal",
