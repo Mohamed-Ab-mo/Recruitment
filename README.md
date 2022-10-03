@@ -9,7 +9,7 @@ Useful drone functions include delivery of small items that are (urgently) neede
 for getting all drones list
 URL:
 
-   http://localhost:9696/apis/drones
+   http://localhost:9696/apis/drones   
 
 HTTP method type: Get
 
